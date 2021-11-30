@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.sider {
+  box-shadow: 0 0 5px #ccc;
+}
+
+.ant-layout {
+  background: #fff;
+}
