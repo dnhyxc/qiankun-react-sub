@@ -8,16 +8,17 @@ const { Sider, Content } = Layout;
 
 interface IProps {
   children: ReactNode;
+  routerBase: string;
 }
 
-const App: React.FC<IProps> = ({ children }) => {
+const App: React.FC<IProps> = ({ children, routerBase }) => {
   let navigate = useNavigate();
 
   const onChangeMenu = (value: any) => {
     if (value.key === "home") {
-      navigate("/");
+      navigate(`${routerBase}`);
     } else {
-      navigate("/about");
+      navigate(`${routerBase}/about`);
     }
   };
 

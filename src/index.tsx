@@ -7,7 +7,7 @@ const render = (props: any) => {
   const { container, routerBase } = props;
   ReactDOM.render(
     <React.StrictMode>
-      <RenderRouter routerBase={routerBase} />
+      <RenderRouter routerBase={routerBase || ""} />
     </React.StrictMode>,
     // 为了避免根 id #root 与其他的 DOM 冲突，需要限制查找范围。
     container

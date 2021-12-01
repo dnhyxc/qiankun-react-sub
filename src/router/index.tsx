@@ -9,13 +9,12 @@ interface IProps {
 }
 
 const RenderRouter: React.FC<IProps> = ({ routerBase }) => {
-  console.log(routerBase, "routerBase");
   return (
     <Router>
-      <App>
+      <App routerBase={routerBase}>
         <Routes>
-          <Route path={`${routerBase || ""}/`} element={<Home />} />
-          <Route path={`${routerBase || ""}/about`} element={<About />} />
+          <Route path={`${routerBase}`} element={<Home />} />
+          <Route path={`${routerBase}/about`} element={<About />} />
         </Routes>
       </App>
     </Router>
